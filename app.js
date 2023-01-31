@@ -5,10 +5,15 @@ const possibleChoices = document.querySelectorAll("button");
 const rock = document.getElementById("rock-button");
 const paper = document.getElementById("paper-button");
 const scicssors = document.getElementById("scissors-button");
+const win = document.getElementById("win");
+const lose = document.getElementById("lose");
+const draw = document.getElementById("draw");
 let userChoice;
 let computerChoice;
 let result;
-
+// window.onload = function () {
+//   document.getElementById("theme").play();
+// };
 possibleChoices.forEach((possibleChoice) =>
   possibleChoice.addEventListener(
     "click",
@@ -90,12 +95,15 @@ function getResult() {
   }
 
   if (result === "draw!") {
+    draw.play();
     result = `<span style="color: yellow; font-size:2rem;">draw!</span>`;
   }
   if (result === "you win!") {
+    win.play();
     result = `<span style="color: green; font-size:2rem;">you win!</span>`;
   }
   if (result === "you lost!") {
+    lose.play();
     result = `<span style="color: red; font-size:2rem;">you lost!</span>`;
   }
 
