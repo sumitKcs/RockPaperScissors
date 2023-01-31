@@ -157,12 +157,15 @@ img {
     width: 5rem;
 }
 
-.caption {}
+.caption {
+    font-size: 1rem;
+}
 
 #result {
     position: relative;
     animation: myResult .1s;
     animation-timing-function: ease-in;
+    font-size: 1rem;
 }
 
 @keyframes mymove {
