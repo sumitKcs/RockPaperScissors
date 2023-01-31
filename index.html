@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
@@ -14,7 +13,9 @@
 
         <div class="div6">
             <div>Rock Paper Scissor</div>
-            <div>How to play?</div>
+            <div class="how-to-play"><span id="myBtn"
+                    title="Rock beats scissors, scissors beats paper, and paper beats rock.">How to
+                    play?</span></div>
         </div>
 
         <div class="div1">
@@ -46,7 +47,16 @@
             <h3> <span id="user-choice"></span></h3>
         </div>
 
+        <div id="myModal" class="modal">
 
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p style="color: black;">Rock beats scissors <br> <br>
+                    scissors beats paper and <br> <br> paper beats rock</p>
+            </div>
+
+        </div>
 
     </main>
     <script src="app.js" charset="utf-8"></script>

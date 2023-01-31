@@ -109,30 +109,23 @@ button {
 
 #rock-button {
     background-color: #C94E98;
-
-}
-
-#rock-button:hover {
-    opacity: 0.5;
 }
 
 #paper-button {
     background-color: #51ACE8;
-
-}
-
-#paper-button:hover {
-    opacity: 0.5;
 }
 
 #scissors-button {
     background-color: #FAED4C;
-
 }
 
+
+#rock-button:hover,
+#paper-button:hover,
 #scissors-button:hover {
     opacity: 0.5;
 }
+
 
 img {
 
@@ -208,6 +201,60 @@ img {
     top: -3rem;
 }
 
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#myBtn {
+    cursor: pointer;
+}
+
+
+
+
 @media screen and (height <601px) {
     main {
         scale: .8;
@@ -250,7 +297,7 @@ img {
 
     .button-container {
         width: 95%;
-        scale: .8
+        scale: 1;
     }
 
     button {
