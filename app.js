@@ -89,7 +89,17 @@ function getResult() {
     result = "you lost!";
   }
 
-  resultDisplay.innerText = result;
+  if (result === "draw!") {
+    result = `<span style="color: yellow; font-size:2rem;">draw!</span>`;
+  }
+  if (result === "you win!") {
+    result = `<span style="color: green; font-size:2rem;">you win!</span>`;
+  }
+  if (result === "you lost!") {
+    result = `<span style="color: red; font-size:2rem;">you lost!</span>`;
+  }
+
+  resultDisplay.innerHTML = result;
 }
 
 var modal = document.getElementById("myModal");
