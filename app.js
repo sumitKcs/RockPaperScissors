@@ -16,12 +16,9 @@ let computerChoice;
 let result;
 
 main.style.display = "none";
-document.body.addEventListener("mousemove", (e) => {
+startButton.addEventListener("click", (e) => {
   theme.muted = false;
   theme.play();
-});
-
-startButton.addEventListener("click", (e) => {
   console.log(e.target.id);
   startButton.style.display = "none";
   main.style.display = "";
