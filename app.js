@@ -8,9 +8,24 @@ const scicssors = document.getElementById("scissors-button");
 const win = document.getElementById("win");
 const lose = document.getElementById("lose");
 const draw = document.getElementById("draw");
+const theme = document.getElementById("theme");
+const startButton = document.getElementById("play-container");
+const main = document.querySelector("main");
 let userChoice;
 let computerChoice;
 let result;
+
+main.style.display = "none";
+document.body.addEventListener("mousemove", (e) => {
+  theme.muted = false;
+  theme.play();
+});
+
+startButton.addEventListener("click", (e) => {
+  console.log(e.target.id);
+  startButton.style.display = "none";
+  main.style.display = "";
+});
 // window.onload = function () {
 //   document.getElementById("theme").play();
 // };
