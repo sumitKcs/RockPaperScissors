@@ -243,6 +243,7 @@ img {
     position: absolute;
     top: 0;
     left: 0;
+    gap: 2rem;
 }
 
 .play-button-container {
@@ -268,6 +269,57 @@ img {
     color: green;
     font-size: 2rem;
     margin: 2rem;
+    position: relative;
+    animation: bottomToUp 1s 1;
+    animation-timing-function: ease-in;
+}
+
+.icons-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    animation: leftToRight .4s 1;
+    animation-timing-function: ease-in;
+}
+
+i {
+    font-size: 5rem;
+    color: green;
+}
+
+.scissors-icon {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+
+}
+
+
+#scissors-icon {
+    color: #FAED4C;
+    transform: rotate(80deg);
+}
+
+#rock-icon {
+    position: relative;
+    color: #C94E98;
+
+}
+
+#paper-icon {
+    color: #51ACE8;
+}
+
+.game-title {
+    position: relative;
+    color: white;
+    font-size: 1rem;
+    animation: rightToLeft 1s 1;
+    animation-timing-function: ease-in;
 }
 
 
@@ -310,6 +362,38 @@ img {
         width: 6rem;
     }
 
+}
+
+@keyframes leftToRight {
+    from {
+        left: calc(100% - 50%);
+    }
+
+    to {
+        left: 0;
+    }
+
+}
+
+@keyframes rightToLeft {
+    from {
+        right: calc(100% + 50%);
+    }
+
+    to {
+        right: 0;
+    }
+
+}
+
+@keyframes bottomToUp {
+    from {
+        bottom: -20rem;
+    }
+
+    to {
+        bottom: 0;
+    }
 
 }
 
@@ -323,6 +407,11 @@ img {
 
 }
 
+@media screen and (width < 310px) {
+    .game-title {
+        font-size: .7rem;
+    }
+}
 
 
 @media screen and (width <601px) {
