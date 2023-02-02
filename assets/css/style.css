@@ -14,13 +14,10 @@ main {
     width: 95%;
     margin: 50px auto;
     margin-top: 0px;
-    /* border: 2px solid red; */
     display: grid;
     grid-template-rows: 5rem 20rem 20rem;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
-    /* align-items: center;
-    justify-items: center; */
     font-size: 1.5rem;
 }
 
@@ -31,7 +28,6 @@ main div:not(.div1) {
 
 /* title bar  */
 .div1 {
-    /* background: blue; */
     grid-row: 1/2;
     grid-column: 1/-1;
     display: flex;
@@ -43,8 +39,6 @@ main div:not(.div1) {
 
 /* computer icon*/
 .div2 {
-    /* background: red; */
-    /* border: 1px solid white; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,8 +48,6 @@ main div:not(.div1) {
 
 /* computer choice */
 .div3 {
-    /* background: green; */
-    /* border: 1px solid white; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -64,9 +56,7 @@ main div:not(.div1) {
 }
 
 /* result */
-
 .div4 {
-    /* background: red; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -75,18 +65,24 @@ main div:not(.div1) {
     grid-column: 3/-1;
 }
 
+
+
 /* user choice */
 .div5 {
-    /* background: purple; */
     grid-column: 2/3;
-    /* grid-column: 1/4; */
-    /* grid-column-start: 1;
-    grid-column-end: 4; */
+}
+
+/* user choices buttons container  */
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 /* user icon */
 .div6 {
-    /* background: blue; */
     grid-row: 3/4;
     display: flex;
     flex-direction: column;
@@ -95,14 +91,6 @@ main div:not(.div1) {
     gap: 1rem;
 }
 
-.button-container {
-    /* border: 2px solid white; */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
 
 img,
 button {
@@ -114,6 +102,7 @@ button {
     margin: 2rem;
 }
 
+/* choices background color  */
 #rock-button {
     background-color: #C94E98;
 }
@@ -126,7 +115,7 @@ button {
     background-color: #FAED4C;
 }
 
-
+/* choices background color on hover  */
 #rock-button:hover,
 #paper-button:hover,
 #scissors-button:hover {
@@ -139,6 +128,7 @@ img {
     object-fit: cover;
 }
 
+/* user choice image properties  */
 .choice {
     height: 12rem;
     width: 10rem;
@@ -147,27 +137,29 @@ img {
 
 }
 
+/* computer choice image properties  */
 .computer-choice {
     height: 12rem;
     width: 10rem;
     min-width: 1rem;
     min-height: 1rem;
-    /* transform: rotate(180deg); */
     position: relative;
-    animation: mymove .1s;
+    animation: topToBottom .1s;
     animation-timing-function: ease-in;
 }
 
-
+/* setting size of computer icon and user icon  */
 .participant {
     height: 5rem;
     width: 5rem;
 }
 
+/* caption below computer icon and user icon  */
 .caption {
     font-size: 1rem;
 }
 
+/* result box  */
 #result {
     position: relative;
     animation: myResult .1s;
@@ -175,17 +167,20 @@ img {
     font-size: 1rem;
 }
 
+/* computer icon animation  */
 .robot {
     position: relative;
-    animation: robotMove 1s infinite;
+    animation: jump 1s infinite;
     animation-timing-function: ease-in;
 }
 
+/* this class will be toggled on choice images by selecting a choice by user  */
 .animate-up {
     position: relative;
     top: -3rem;
 }
 
+/* modal container  */
 .modal {
     display: none;
     /* Hidden by default */
@@ -237,6 +232,7 @@ img {
     cursor: pointer;
 }
 
+/* start screen container  */
 .play-container {
     z-index: 2;
     height: 100vh;
@@ -252,6 +248,8 @@ img {
     gap: 2rem;
 }
 
+/* start button container  */
+
 .play-button-container {
     display: flex;
     flex-direction: column;
@@ -261,6 +259,7 @@ img {
     height: 8rem;
 }
 
+/* start button  */
 .start-button {
     outline: none;
     border: none;
@@ -270,6 +269,7 @@ img {
     animation-timing-function: ease-in;
 }
 
+/* plat text below start image  */
 .play-text {
     display: block;
     color: green;
@@ -280,6 +280,7 @@ img {
     animation-timing-function: ease-in;
 }
 
+/* rock, paper and scissors icon container on start screen  */
 .icons-container {
     position: relative;
     display: flex;
@@ -289,42 +290,47 @@ img {
     align-content: center;
     gap: 1rem;
     margin-bottom: 2rem;
-    animation: leftToRight .4s 1;
+    animation: rightToLeft .4s 1;
     animation-timing-function: ease-in;
 }
+
+/* rock, paper and scissors icon on start screen  */
 
 i {
     font-size: 5rem;
     color: green;
 }
 
+/* scissors icon on start screen  */
 .scissors-icon {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 
 }
 
-
 #scissors-icon {
     color: #FAED4C;
     transform: rotate(80deg);
 }
 
+/* rock icon on start screen  */
 #rock-icon {
     position: relative;
     color: #C94E98;
 
 }
 
+/* paper icon on start screen  */
 #paper-icon {
     color: #51ACE8;
 }
 
+/* Rock, paper, scissors ttile on start screen  */
 .game-title {
     position: relative;
     color: white;
     font-size: 1rem;
-    animation: rightToLeft 1s 1;
+    animation: leftToRight 1s 1;
     animation-timing-function: ease-in;
 }
 
@@ -332,7 +338,8 @@ i {
 
 /* animations */
 
-@keyframes mymove {
+/* animation for computer choice image  */
+@keyframes topToBottom {
     from {
         top: -3rem;
     }
@@ -342,7 +349,8 @@ i {
     }
 }
 
-@keyframes robotMove {
+/* animation for computer icon  */
+@keyframes jump {
     from {
         top: -1rem;
     }
@@ -352,6 +360,7 @@ i {
     }
 }
 
+/* animation for start screen play button icon  */
 @keyframes growup {
     0% {
         height: 5.5rem;
@@ -370,7 +379,8 @@ i {
 
 }
 
-@keyframes leftToRight {
+/* animation for  */
+@keyframes rightToLeft {
     from {
         left: calc(100% - 50%);
     }
@@ -381,7 +391,7 @@ i {
 
 }
 
-@keyframes rightToLeft {
+@keyframes leftToRight {
     from {
         right: calc(100% + 50%);
     }
