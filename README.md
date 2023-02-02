@@ -43,6 +43,7 @@ Rock, paper, and scissors game is a simple fun game in which both the players ha
   
  ## Deployed App Link
  
-  - <a href="https://sumitkcs.github.io/RockPaperScissors/" target="_top"> Rock Paper Scissor</a>
+  - <a href="https://sumitkcs.github.io/RockPaperScissors/" target="_top"> Github Pages </a> 
+  - <a href="https://rps-sumit.netlify.app/" target="_top">Netlify</a>
   
 
