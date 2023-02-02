@@ -41,7 +41,7 @@ Rock, paper, and scissors game is a simple fun game in which both the players ha
        <img src="https://i.postimg.cc/6qdgtMds/main-screen.jpg)](https://postimg.cc/jnSZhQgv" alt="drawing" width="200"/>
     </div>
   
- # Deployed App Link
+ ## Deployed App Link
  
   - <a href="https://sumitkcs.github.io/RockPaperScissors/" target="_top"> Rock Paper Scissor</a>
   
