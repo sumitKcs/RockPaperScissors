@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
     <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://kit.fontawesome.com/a12bd5cdcb.js" crossorigin="anonymous"></script>
+    <audio id="theme" src="assets/audio/theme.mp3"></audio>
+    <audio id="win" src="assets/audio/win.mp3"></audio>
+    <audio id="lose" src="assets/audio/lose.mp3"></audio>
+    <audio id="draw" src="assets/audio/draw.mp3"></audio>
 
 </head>
 
@@ -15,79 +19,80 @@
 
     <main>
 
-        <div class="div6">
+        <!-- top bar -->
+        <div class="div1">
+            <!-- game title  -->
             <div>Rock Paper Scissor</div>
-            <div class="how-to-play"><span id="myBtn"
-                    title="Rock beats scissors, scissors beats paper, and paper beats rock.">How to
-                    play?</span></div>
+            <!-- modal button  -->
+            <div class="how-to-play">
+                <span id="modal-button" title="click to know game rules">
+                    How to play?
+                </span>
+            </div>
         </div>
 
-        <div class="div1">
+        <!-- modal box  -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <p style="color: black;">Rock beats scissors <br> <br>
+                    scissors beats paper and <br> <br> paper beats rock</p>
+            </div>
+        </div>
 
-            <img class="participant robot" src="assets/robot (1).png" alt="computer">
+        <!-- computer player  -->
+        <div class="div2">
+            <img class="participant robot" src="assets/img/robot.png" alt="computer">
             <span class="caption">Comp</span>
 
         </div>
-        <div class="div2">
+
+        <!-- computer choice  -->
+        <div class="div3">
             <h3><span id="computer-choice"></span></h3>
         </div>
-        <div class="div5">
+        <div class="div4">
             <h3> <span id="result"></span></h3>
         </div>
 
-        <div class="div4">
+        <!-- user choice  -->
+        <div class="div5">
             <div class="button-container">
-                <button id="rock-button"><img id="rock" class="choice" src="assets/rock.jpg" alt="rock"></button>
-                <button id="paper-button"><img id="paper" class="choice" src="assets/paper.jpg" alt="paper"></button>
-                <button id="scissors-button"><img id="scissors" class="choice" src="assets/scissors.jpg"
+                <button id="rock-button"><img id="rock" class="choice" src="assets/img/rock.jpg" alt="rock"></button>
+                <button id="paper-button"><img id="paper" class="choice" src="assets/img/paper.jpg"
+                        alt="paper"></button>
+                <button id="scissors-button"><img id="scissors" class="choice" src="assets/img/scissors.jpg"
                         alt="scissors"></button>
             </div>
-
         </div>
-        <div class="div3">
 
-            <img class="participant" src="assets/people.png" alt="user">
+        <!-- user player  -->
+        <div class="div6">
+            <img class="participant" src="assets/img/people.png" alt="user">
             <span class="caption">user</span>
             <h3> <span id="user-choice"></span></h3>
         </div>
 
-        <div id="myModal" class="modal">
-
-            <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p style="color: black;">Rock beats scissors <br> <br>
-                    scissors beats paper and <br> <br> paper beats rock</p>
-            </div>
-
-        </div>
-
-        <audio id="win">
-            <source src="assets/audio/win.mp3" type="audio/mpeg">
-        </audio>
-        <audio id="lose">
-            <source src="assets/audio/lose.mp3" type="audio/mpeg">
-        </audio>
-        <audio id="draw">
-            <source src="assets/audio/draw.mp3" type="audio/mpeg">
-        </audio>
-        <audio id="theme" src="assets/audio/theme.mp3" autoplay muted></audio>
-
-
     </main>
+    <!-- start screen  -->
     <div class="play-container" id="play-container">
+        <!-- rock paper scissors icons  -->
         <div class="icons-container">
             <div class="rock-icon"><i id="rock-icon" class="fa-solid fa-hand-fist"></i></div>
             <div class="paper-icon"><i id="paper-icon" class="fa-solid fa-hand"></i></div>
             <div class="scissors-icon"><i id="scissors-icon" class="fa-solid fa-hand-scissors"></i></div>
         </div>
+        <!-- rock paper scissors text  -->
         <div class="game-title">Rock Paper Scissor</div>
-
-        <div class="play-button-container"> <img id="start-button" class="start-button" src="assets/play.png"
+        <!-- play button  -->
+        <div class="play-button-container"> <img id="start-button" class="start-button" src="assets/img/play.png"
                 alt="play-button"> </div>
+        <!-- play text  -->
         <span class="play-text">play</span>
     </div>
-    <script src="app.js" charset="utf-8"></script>
+    <!-- js file  -->
+    <script type="module" src="assets/js/app.js" charset="utf-8"></script>
 </body>
 
 </html>
