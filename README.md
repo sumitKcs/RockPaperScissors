@@ -25,4 +25,24 @@ Rock, paper, and scissors game is a simple fun game in which both the players ha
 3. paper✋ beats rock✊
 
 ## Preview of the game
-![preview-gif](https://github.com/sumitKcs/RockPaperScissors/blob/master/assets/preview/preview.gif)
+- On Desktop
+  - Start Screen
+  [![start-screen.png](https://i.postimg.cc/RVB43NpZ/start-screen.png)](https://postimg.cc/232PM8fs)  
+  - Main Screen
+  [![main-screen.png](https://i.postimg.cc/C1FzGx49/main-screen.png)](https://postimg.cc/CZQhYYX4)
+ 
+- On Mobile
+  - Start Screen
+    <div>
+      <img src="https://i.postimg.cc/Vvypxx0B/start-screen.jpg)](https://postimg.cc/BLgmDwgX" alt="drawing" width="200"/> 
+    </div>
+  - Main Screen
+    <div>
+       <img src="https://i.postimg.cc/6qdgtMds/main-screen.jpg)](https://postimg.cc/jnSZhQgv" alt="drawing" width="200"/>
+    </div>
+  
+ # Deployed App Link
+ 
+  - <a href="https://sumitkcs.github.io/RockPaperScissors/" target="_top"> Rock Paper Scissor</a>
+  
+
