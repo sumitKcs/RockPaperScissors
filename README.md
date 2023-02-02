@@ -25,3 +25,4 @@ Rock, paper, and scissors game is a simple fun game in which both the players ha
 3. paper✋ beats rock✊
 
 ## Preview of the game
+![preview-gif](https://github.com/sumitKcs/RockPaperScissors/blob/master/assets/preview/preview.gif)
