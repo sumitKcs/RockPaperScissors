@@ -2,7 +2,7 @@ import generateComputerChoice, { computerChoice } from "./computerChoice.js";
 import getResult from "./result.js";
 
 //get the all 3 user choices buuton having images
-const possibleChoices = document.querySelectorAll("button");
+const possibleChoices = document.getElementsByClassName("choice");
 //get rock button
 const rock = document.getElementById("rock-button");
 //get paper button
@@ -12,12 +12,13 @@ const scicssors = document.getElementById("scissors-button");
 
 //variable declarations
 let userChoice;
-
+console.log(possibleChoices);
 //getUserChoice function
 const getUserChoice = () => {
   /*getting all buttons one by one and 
   adding onClick event listeners to each of them*/
-  possibleChoices.forEach((possibleChoice) =>
+
+  Array.from(possibleChoices).forEach((possibleChoice) =>
     possibleChoice.addEventListener("click", (e) => {
       //getting button id, but here we will get image id as button contains image
       userChoice = e.target.id;
